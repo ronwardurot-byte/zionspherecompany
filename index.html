@@ -2,199 +2,202 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Zion Sphere Company</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta charset="utf-8">
+<title>Zion Sphere Company</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="" name="keywords">
+<meta content="" name="description">
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+<!-- Favicon -->
+<link href="img/favicon.ico" rel="icon">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Heebo:wght@400;500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <!-- Icon Fonts -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+<!-- Icon Font Stylesheet -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Libraries -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+<!-- Libraries Stylesheet -->
+<link href="lib/animate/animate.min.css" rel="stylesheet">
+<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Customized Bootstrap Stylesheet -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet">
+<!-- Template Stylesheet -->
+<link href="css/style.css" rel="stylesheet">
 
-    <style>
-        /* Dynamic typing effect */
-        .typing {
-            font-family: 'Caveat', cursive;
-            font-size: 2rem;
-            color: gold;
-            white-space: pre-wrap;
-            overflow: hidden;
-            border-right: 0.15em solid gold;
-            animation: blink-caret 0.75s step-end infinite;
-        }
+<style>
+body { font-family: 'Poppins', sans-serif; }
+h1,h2,h3,h4,h5,h6 { font-family: 'Orbitron', sans-serif; }
 
-        @keyframes blink-caret {
-            from, to { border-color: transparent; }
-            50% { border-color: gold; }
-        }
-    </style>
+/* Typing animation */
+.typing {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    color: gold;
+    white-space: pre-wrap;
+    overflow: hidden;
+    border-right: 0.15em solid gold;
+    animation: blink-caret 0.75s step-end infinite;
+}
+@keyframes blink-caret {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: gold; }
+}
+
+/* Vision & Mission background */
+.vision-mission-bg {
+    background-color: beige;
+    color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+</style>
+
 </head>
 
 <body>
-    <div class="container-xxl bg-white p-0">
-        <!-- Spinner -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
+<div class="container-xxl bg-white p-0">
 
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-            <a href="" class="navbar-brand p-0">
-                <h1 class="m-0"><i class="fa fa-search me-2"></i> ZION SPHERE COMPANY</h1>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="fa fa-bars"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link">Career</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="team.html" class="dropdown-item">Our Team</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="404.html" class="dropdown-item">404 Page</a>
-                        </div>
-                    </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
-                </div>
-                <button type="button" class="btn text-secondary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
-            </div>
-        </nav>
+<!-- Spinner Start -->
+<div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+<div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+<span class="sr-only">Loading...</span>
+</div>
+</div>
+<!-- Spinner End -->
 
-        <!-- Hero Section -->
-        <div class="container-xxl py-5 bg-primary hero-header mb-5">
-            <div class="container my-5 py-5 px-lg-5">
-                <div class="row g-5 py-5">
-                    <div class="col-lg-6 text-center text-lg-start">
-                        <h1 class="text-white mb-4 animated zoomIn" style="font-family: 'Caveat', cursive; color: gold;">
-                            Transforming the economics of US live events with data-driven insights, innovative technology, statistical forecasting and deep analytics at every step
-                        </h1>
-                        <p class="text-white pb-3 animated zoomIn">Intelligence. Precision. Dominance. This is where data becomes strategy.</p>
-                        <!-- Buttons -->
-                        <button type="button" class="btn btn-warning py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft" data-bs-toggle="modal" data-bs-target="#visionModal">
-                            Vision
-                        </button>
-                        <button type="button" class="btn btn-outline-warning py-sm-3 px-sm-5 rounded-pill animated slideInRight" data-bs-toggle="modal" data-bs-target="#missionModal">
-                            Mission
-                        </button>
-                    </div>
-                    <div class="col-lg-6 text-center text-lg-start">
-                        <img class="img-fluid" src="img/hero.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- Navbar & Hero Start -->
+<div class="container-xxl position-relative p-0">
+<nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+<a href="" class="navbar-brand p-0">
+<h1 class="m-0"><i class="fa fa-search me-2"></i> ZION SPHERE COMPANY <span class="fs-5"></span></h1>
+</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+<span class="fa fa-bars"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<div class="navbar-nav ms-auto py-0">
+<a href="index.html" class="nav-item nav-link active">Home</a>
+<a href="about.html" class="nav-item nav-link">About</a>
+<a href="service.html" class="nav-item nav-link">Career</a>
 
-        <!-- Vision Modal -->
-        <div class="modal fade" id="visionModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content text-center">
-                    <div class="modal-header border-0 justify-content-center">
-                        <h2 class="modal-title">Vision</h2>
-                        <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p id="visionText" class="typing"></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+<div class="dropdown-menu m-0">
+<a href="team.html" class="dropdown-item">Our Team</a>
+<a href="testimonial.html" class="dropdown-item">Testimonial</a>
+<a href="404.html" class="dropdown-item">404 Page</a>
+</div>
+</div>
+<a href="contact.html" class="nav-item nav-link">Contact</a>
+</div>
+<button type="button" class="btn btn-outline-warning ms-3" data-bs-toggle="modal" data-bs-target="#loginModal">
+Login / Register
+</button>
+</div>
+</nav>
 
-        <!-- Mission Modal -->
-        <div class="modal fade" id="missionModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content text-center">
-                    <div class="modal-header border-0 justify-content-center">
-                        <h2 class="modal-title">Mission</h2>
-                        <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p id="missionText" class="typing"></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="container-xxl py-5 bg-primary hero-header mb-5">
+<div class="container my-5 py-5 px-lg-5">
+<div class="row g-5 py-5">
+<div class="col-lg-6 text-center text-lg-start">
+<h1 class="text-white mb-4 animated zoomIn" style="font-family:'Orbitron'; color:gold;">
+Transforming the economics of US live events with data-driven insights, innovative technology, statistical forecasting and deep analytics
+</h1>
+<p class="text-white pb-3 animated zoomIn">Intelligence. Precision. Dominance. This is where data becomes strategy.</p>
+<button type="button" class="btn btn-warning py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft" data-bs-toggle="modal" data-bs-target="#visionModal">
+Vision
+</button>
+<button type="button" class="btn btn-outline-warning py-sm-3 px-sm-5 rounded-pill animated slideInRight" data-bs-toggle="modal" data-bs-target="#missionModal">
+Mission
+</button>
+</div>
+<div class="col-lg-6 text-center text-lg-start">
+<img class="img-fluid" src="img/hero.png" alt="">
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Navbar & Hero End -->
 
-        <!-- Full Screen Search Modal -->
-        <div class="modal fade" id="searchModal" tabindex="-1">
-            <div class="modal-dialog modal-fullscreen">
-                <div class="modal-content" style="background: rgba(29, 29, 39, 0.7);">
-                    <div class="modal-header border-0">
-                        <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body d-flex align-items-center justify-content-center">
-                        <div class="input-group" style="max-width: 600px;">
-                            <input type="text" class="form-control bg-transparent border-light p-3" placeholder="Type search keyword">
-                            <button class="btn btn-light px-4"><i class="bi bi-search"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- Vision Modal -->
+<div class="modal fade" id="visionModal" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content vision-mission-bg">
+<h2>Vision</h2>
+<p id="visionText" class="typing"></p>
+<button type="button" class="btn btn-dark mt-3" data-bs-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
 
-        <!-- You can insert About, Services, Portfolio, Team, Footer sections here as in your original code -->
+<!-- Mission Modal -->
+<div class="modal fade" id="missionModal" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content vision-mission-bg">
+<h2>Mission</h2>
+<p id="missionText" class="typing"></p>
+<button type="button" class="btn btn-dark mt-3" data-bs-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
 
-    </div>
+<!-- Login/Register Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content p-4 rounded">
+<h2 class="text-center mb-3">Login / Register</h2>
+<form id="authForm">
+<input type="email" id="email" class="form-control mb-2" placeholder="Email" required>
+<input type="password" id="password" class="form-control mb-2" placeholder="Password" required>
+<button type="submit" class="btn btn-warning w-100">Send Auth Code</button>
+</form>
+<small class="d-block mt-2 text-muted">Only zionspherecompany.com or zionsphereanalytics.com emails allowed</small>
+<button type="button" class="btn btn-secondary mt-2 w-100" data-bs-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
 
-    <!-- JS Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-    <script src="js/main.js"></script>
+<!-- The rest of your original content goes here exactly as before: About, Newsletter, Services, Portfolio, Testimonials, Team, Footer -->
 
-    <!-- Typing Animation JS -->
-    <script>
-        function typeText(elementId, text, speed = 50) {
-            const el = document.getElementById(elementId);
-            el.textContent = "";
-            let i = 0;
-            const timer = setInterval(() => {
-                if (i < text.length) {
-                    el.textContent += text.charAt(i);
-                    i++;
-                } else {
-                    clearInterval(timer);
-                }
-            }, speed);
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Typing animation
+    function typeText(elId, text, speed = 50) {
+        const el = document.getElementById(elId);
+        el.textContent = '';
+        let i = 0;
+        const timer = setInterval(() => {
+            if (i < text.length) {
+                el.textContent += text.charAt(i);
+                i++;
+            } else clearInterval(timer);
+        }, speed);
+    }
+    $('#visionModal').on('shown.bs.modal', () => typeText('visionText', 'To be the leading analytics and technology company revolutionizing the live events industry, expanding globally by 2027.'));
+    $('#missionModal').on('shown.bs.modal', () => typeText('missionText', 'We empower live event companies with real-time data, predictive insights, and innovative technology to maximize revenue, optimize strategies, and enhance audience experiences.'));
+
+    // Login validation
+    document.getElementById('authForm').addEventListener('submit', function(e){
+        e.preventDefault();
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const domain = email.split('@')[1];
+        if(domain === "zionspherecompany.com" || domain === "zionsphereanalytics.com"){
+            alert("Auth code sent to " + email + " (demo)");
+        } else{
+            alert("Invalid email domain. Use zionspherecompany.com or zionsphereanalytics.com");
         }
-
-        // Trigger typing animation when modal is shown
-        $('#visionModal').on('shown.bs.modal', function () {
-            typeText('visionText', 'To be the leading analytics and technology company revolutionizing the live events industry, expanding globally by 2027.');
-        });
-
-        $('#missionModal').on('shown.bs.modal', function () {
-            typeText('missionText', 'We empower live event companies with real-time data, predictive insights, and innovative technology to maximize revenue, optimize strategies, and enhance audience experiences.');
-        });
-    </script>
-
+    });
+</script>
 </body>
 </html>
