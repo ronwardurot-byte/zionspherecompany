@@ -5,15 +5,16 @@
     <meta charset="utf-8">
     <title>Zion Sphere Company</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
-    <!-- Google Fonts: Unique Font -->
+    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Using 'Poppins' as unique font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Roboto:wght@400;500;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -31,82 +32,228 @@
     <link href="css/style.css" rel="stylesheet">
 
     <style>
-        /* Global styles */
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #ff0000; /* Red background */
-            color: #fff;
+        /* Caveat Font for Titles and Labels */
+        h1, h2, h3, h4, h5, h6, .modal-title, label, .btn {
+            font-family: 'Caveat', cursive;
         }
 
-        a {
-            color: #fff;
+        /* Gold Buttons */
+        .btn-warning {
+            background: gold;
+            border: 2px solid gold;
+            color: black;
         }
 
-        .navbar, .footer {
-            background-color: #800000; /* Darker red for navbar/footer */
+        .btn-warning:hover {
+            background: #ffd700;
+            color: black;
+            box-shadow: 0 0 15px gold;
         }
 
-        .btn-primary {
-            background-color: #fff;
-            color: #ff0000;
-            border: none;
+        /* Login Modal Animation */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        .btn-primary:hover {
-            background-color: #ffe5e5;
-            color: #ff0000;
+        #loginModal .modal-content {
+            animation: fadeInUp 0.8s;
+            background: #1e1e2f;
+            border-radius: 1rem;
+        }
+
+        #loginModal .form-label, #loginModal .modal-title {
+            color: gold;
+        }
+
+        #loginModal input.form-control:focus {
+            box-shadow: 0 0 10px gold;
+            border-color: gold;
         }
     </style>
 </head>
 
 <body>
-    <div class="container-xxl p-0">
-
-        <!-- Navbar Start -->
-        <nav class="navbar navbar-expand-lg navbar-dark px-4 px-lg-5 py-3 py-lg-0">
-            <a href="index.html" class="navbar-brand p-0">
-                <h1 class="m-0"><i class="fa fa-search me-2"></i> ZION SPHERE COMPANY</h1>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="fa fa-bars"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link">Career</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="team.html" class="dropdown-item">Our Team</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <!-- 404 Removed -->
-                        </div>
-                    </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    <a href="login.html" class="nav-item nav-link">Login</a>
-                </div>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
             </div>
-        </nav>
-        <!-- Navbar End -->
+        </div>
+        <!-- Spinner End -->
 
-        <!-- Hero Start -->
-        <div class="container-xxl py-5">
-            <div class="container px-lg-5">
-                <div class="row g-5 py-5 text-center">
-                    <div class="col-lg-12">
-                        <h1 class="mb-4">Transforming the economics of US live events</h1>
-                        <p>Data-driven insights, innovative technology, statistical forecasting, and deep analytics at every step.</p>
-                        <a href="" class="btn btn-primary rounded-pill py-2 px-4">Vision</a>
-                        <a href="" class="btn btn-outline-light rounded-pill py-2 px-4">Mission</a>
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="m-0"><i class="fa fa-search me-2"></i> ZION SPHERE COMPANY</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Career</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="team.html" class="dropdown-item">Our Team</a>
+                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                <!-- Removed 404 Page -->
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <button type="button" class="btn text-secondary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
+                    <!-- Login Button -->
+                    <button type="button" class="btn btn-warning rounded-pill py-2 px-4 ms-3" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                </div>
+            </nav>
+
+            <div class="container-xxl py-5 bg-primary hero-header mb-5">
+                <div class="container my-5 py-5 px-lg-5">
+                    <div class="row g-5 py-5">
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <h1 class="text-white mb-4 animated zoomIn" style="font-family: 'Caveat', cursive; color: gold;">
+                                Transforming the economics of US live events with data-driven insights, innovative technology, statistical forecasting and deep analytics at every step
+                            </h1>
+                            <p class="text-white pb-3 animated zoomIn">Intelligence. Precision. Dominance. This is where data becomes strategy.</p>
+                            <a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Vision</a>
+                            <a href="" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Mission</a>
+                        </div>
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <img class="img-fluid" src="img/hero.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Hero End -->
+        <!-- Navbar & Hero End -->
 
-        <!-- Add your other sections here -->
+        <!-- Full Screen Search Modal -->
+        <div class="modal fade" id="searchModal" tabindex="-1">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content" style="background: rgba(29, 29, 39, 0.7);">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center justify-content-center">
+                        <div class="input-group" style="max-width: 600px;">
+                            <input type="text" class="form-control bg-transparent border-light p-3" placeholder="Type search keyword">
+                            <button class="btn btn-light px-4"><i class="bi bi-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- Login Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content text-center">
+                    <div class="modal-header border-0 justify-content-center">
+                        <h2 class="modal-title">Welcome Back</h2>
+                        <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3 text-start">
+                                <label for="loginEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email">
+                            </div>
+                            <div class="mb-3 text-start">
+                                <label for="loginPassword" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password">
+                            </div>
+                            <button type="submit" class="btn btn-warning w-100 rounded-pill">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About, Service, Portfolio, Team, Testimonial, Footer sections -->
+        <!-- Keep all your existing sections here (same as original code) -->
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-primary text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Get In Touch</h5>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                        <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Popular Link</h5>
+                        <a class="btn btn-link" href="">About Us</a>
+                        <a class="btn btn-link" href="">Contact Us</a>
+                        <a class="btn btn-link" href="">Privacy Policy</a>
+                        <a class="btn btn-link" href="">Terms & Condition</a>
+                        <a class="btn btn-link" href="">Career</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Project Gallery</h5>
+                        <div class="row g-2">
+                            <div class="col-4"><img class="img-fluid" src="img/portfolio-1.jpg" alt="Image"></div>
+                            <div class="col-4"><img class="img-fluid" src="img/portfolio-2.jpg" alt="Image"></div>
+                            <div class="col-4"><img class="img-fluid" src="img/portfolio-3.jpg" alt="Image"></div>
+                            <div class="col-4"><img class="img-fluid" src="img/portfolio-4.jpg" alt="Image"></div>
+                            <div class="col-4"><img class="img-fluid" src="img/portfolio-5.jpg" alt="Image"></div>
+                            <div class="col-4"><img class="img-fluid" src="img/portfolio-6.jpg" alt="Image"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Newsletter</h5>
+                        <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulpu</p>
+                        <div class="position-relative w-100 mt-3">
+                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                            <br>Distributed By: <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
     </div>
 
     <!-- JavaScript Libraries -->
@@ -118,6 +265,8 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
 
