@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Log In | Zion Sphere Company</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <link href="img/favicon.ico" rel="icon">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons + Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <style>
+    body { background: #0b2bd6; }
+    .login-wrap{
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 16px;
+    }
+    .login-card{
+      width: 100%;
+      max-width: 520px;
+      background: #fff;
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.25);
+    }
+    .login-title{
+      font-family:'Caveat', cursive;
+      font-size: 2.6rem;
+      margin-bottom: 6px;
+      letter-spacing: .6px;
+    }
+    .login-sub{
+      margin-bottom: 18px;
+      color: #444;
+    }
+    .domain-note{
+      background: rgba(13, 110, 253, 0.08);
+      border: 1px solid rgba(13, 110, 253, 0.18);
+      padding: 10px 12px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-wrap">
+    <div class="login-card">
+      <div class="text-center mb-3">
+        <div class="login-title">Log In</div>
+        <div class="login-sub">Access Zion Sphere tools and dashboards.</div>
+      </div>
+
+      <div class="domain-note">
+        <strong>Note:</strong> Account access will be restricted to emails ending in
+        <strong>@zionsphereanalytics.com</strong>.
+      </div>
+
+      <!-- Front-end only placeholder form -->
+      <form>
+        <div class="mb-3">
+          <label class="form-label">Work Email</label>
+          <input type="email" class="form-control" placeholder="name@zionsphereanalytics.com" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control" placeholder="••••••••" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100 rounded-pill py-2">
+          Log In
+        </button>
+
+        <div class="text-center mt-3">
+          <a href="index.html">← Back to Home</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
 
