@@ -12,6 +12,14 @@
   #vision-section p {
     font-family: 'Caveat', cursive !important;
   }
+		  /* Caveat font for Ready to Get Started CTA */
+  #cta-start h3,
+  #cta-start p,
+  #cta-start small {
+    font-family: 'Caveat', cursive !important;
+    letter-spacing: 0.5px;
+  }
+
 </style>
 
 <head>			
@@ -227,6 +235,10 @@ Together, we combine global talent, advanced data engineering, and industry expe
 <div class="container-xxl bg-primary newsletter my-5 wow fadeInUp" 
      data-wow-delay="0.1s"
      id="cta-start">			
+	<div class="container-xxl bg-primary newsletter my-5 wow fadeInUp"
+     data-wow-delay="0.1s"
+     id="cta-start">
+
 
   <div class="container px-lg-5">			
     <div class="row align-items-center" style="min-height: 250px;">			
@@ -234,34 +246,25 @@ Together, we combine global talent, advanced data engineering, and industry expe
       <div class="col-12 col-md-6">			
 
         <h3 class="text-white mb-2">
-          Ready to Outthink the Market?
+          Ready to outthink the market?
         </h3>
 
         <p class="text-white mt-2 mb-0" style="font-size: 1.05rem; max-width: 520px;">
-          Zion Sphere Company delivers predictive analytics, pricing intelligence, and operational insight designed to win in the competitive economics of live event markets.
+          Zion Sphere delivers predictive analytics, pricing intelligence, and operational insight designed to win in the competitive economics of live event markets.
         </p>
 
-        <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST" class="position-relative w-100 mt-4">
-  <!-- Optional: no captcha -->
-  <input type="hidden" name="_captcha" value="false">
-  <!-- Optional: email subject -->
-  <input type="hidden" name="_subject" value="New Strategy Request - Zion Sphere">
-  <!-- Optional: redirect after submit -->
-  <input type="hidden" name="_next" value="thankyou.html">
+        <div class="position-relative w-100 mt-4">
+          <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5"
+                 type="text"
+                 placeholder="Request a strategy conversation"
+                 style="height: 48px;">
+          <button type="button"
+                  class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2">
+            <i class="fa fa-arrow-right text-primary fs-4"></i>
+          </button>
+        </div>
 
-  <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5"
-         type="text"
-         name="message"
-         placeholder="Request a strategy conversation"
-         required
-         style="height: 48px;">
-
-  <button type="submit"
-          class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2 rounded-pill px-4 cta-btn">
-    Let’s talk →
-  </button>
-</form>
-
+      </div>
 
       <div class="col-md-6 text-center d-none d-md-block">
         <img class="img-fluid mt-5" style="height: 250px;" src="img/newsletter.png" alt="">
