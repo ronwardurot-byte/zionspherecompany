@@ -12,6 +12,37 @@
   #vision-section p {
     font-family: 'Caveat', cursive !important;
   }
+		/* ===== CTA Newsletter (Caveat + Gold) ===== */
+#cta-start .cta-title {
+  font-family: 'Caveat', cursive !important;
+  font-weight: 700;
+  font-size: 2.4rem;
+  letter-spacing: 0.6px;
+  text-shadow:
+    0 0 10px rgba(255, 215, 0, 0.35),
+    0 0 28px rgba(255, 215, 0, 0.18);
+}
+
+#cta-start .cta-body {
+  font-family: 'Roboto', 'Heebo', sans-serif !important;
+  opacity: 0.95;
+}
+
+#cta-start .cta-btn {
+  font-family: 'Caveat', cursive !important;
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 0.4px;
+  background: rgba(255, 215, 0, 0.15);
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  color: #fff;
+}
+
+#cta-start .cta-btn:hover {
+  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.25);
+  transform: translateY(-1px);
+}
+
 </style>
 
 <head>			
@@ -224,7 +255,7 @@ Together, we combine global talent, advanced data engineering, and industry expe
 			
 			
 <!-- Newsletter Start -->			
-<div class="container-xxl bg-primary newsletter my-5 wow fadeInUp" 
+<div class="container-xxl bg-primary newsletter my-5 wow fadeInUp"
      data-wow-delay="0.1s"
      id="cta-start">			
 
@@ -233,28 +264,43 @@ Together, we combine global talent, advanced data engineering, and industry expe
 
       <div class="col-12 col-md-6">			
 
-        <h3 class="text-white mb-2">
-          Ready to outthink the market?
+        <h3 class="text-white mb-2 wow fadeInUp" data-wow-delay="0.1s">
+          <span class="cta-title">Ready to outthink the market?</span>
         </h3>
 
-        <p class="text-white mt-2 mb-0" style="font-size: 1.05rem; max-width: 520px;">
+        <p class="text-white mt-2 mb-0 cta-body wow fadeInUp"
+           data-wow-delay="0.2s"
+           style="font-size: 1.05rem; max-width: 520px;">
           Zion Sphere delivers predictive analytics, pricing intelligence, and operational insight designed to win in the competitive economics of live event markets.
         </p>
 
-        <div class="position-relative w-100 mt-4">
+        <!-- REAL EMAIL SENDER -->
+        <form action="https://formsubmit.co/operations@zionspherecompany.com"
+              method="POST"
+              class="position-relative w-100 mt-4 wow fadeInUp"
+              data-wow-delay="0.3s">
+
+          <!-- FormSubmit settings -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="New Strategy Request – Zion Sphere">
+          <input type="hidden" name="_template" value="table">
+
           <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5"
                  type="text"
+                 name="message"
                  placeholder="Request a strategy conversation"
+                 required
                  style="height: 48px;">
-          <button type="button"
-                  class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2">
-            <i class="fa fa-arrow-right text-primary fs-4"></i>
+
+          <button type="submit"
+                  class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2 rounded-pill px-4 cta-btn">
+            Let’s talk →
           </button>
-        </div>
+        </form>
 
       </div>
 
-      <div class="col-md-6 text-center d-none d-md-block">
+      <div class="col-md-6 text-center d-none d-md-block wow zoomIn" data-wow-delay="0.2s">
         <img class="img-fluid mt-5" style="height: 250px;" src="img/newsletter.png" alt="">
       </div>
 
@@ -262,6 +308,7 @@ Together, we combine global talent, advanced data engineering, and industry expe
   </div>			
 </div>			
 <!-- Newsletter End -->
+
 		
 			
 			
