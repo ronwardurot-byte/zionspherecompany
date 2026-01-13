@@ -155,7 +155,7 @@
             <i class="fa fa-search"></i>
           </button>
 
-          <!-- ✅ Employee | Log In now DIRECTLY routes to zionspherecompany.online -->
+          <!-- ✅ Employee | Log In redirects to zionspherecompany.online -->
           <a href="https://zionspherecompany.online"
              class="btn btn-light rounded-pill py-2 px-4 ms-3"
              id="employeeLoginBtn"
@@ -561,7 +561,22 @@
   <script src="lib/isotope/isotope.pkgd.min.js"></script>
   <script src="lib/lightbox/js/lightbox.min.js"></script>
 
+  <!-- ✅ Optional: force redirect via JS (extra-safe) -->
+  <script>
+    (function () {
+      var btn = document.getElementById('employeeLoginBtn');
+      if (!btn) return;
+
+      btn.addEventListener('click', function (e) {
+        // ensures it ALWAYS goes to zionspherecompany.online even if something overrides href
+        e.preventDefault();
+        window.location.href = 'https://zionspherecompany.online';
+      });
+    })();
+  </script>
+
   <!-- Template Javascript -->
   <script src="js/main.js"></script>
 </body>
 </html>
+
