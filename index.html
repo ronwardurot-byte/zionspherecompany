@@ -75,15 +75,6 @@
     font-size: 1.2rem;
     letter-spacing: 0.5px;
   }
-
-  /* Optional: make embedded login take most of the screen when opened */
-  .employee-login-embed {
-    width: 100%;
-    height: min(78vh, 780px);
-    border: 0;
-    border-radius: 18px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.12);
-  }
 </style>
 
 <head>
@@ -164,12 +155,11 @@
             <i class="fa fa-search"></i>
           </button>
 
-          <!-- ✅ Employee Log In now goes to Base44 app (embed modal) -->
-          <a href="zionspherecompany.base44.app"
+          <!-- ✅ Employee | Log In now DIRECTLY routes to zionspherecompany.online -->
+          <a href="https://zionspherecompany.online"
              class="btn btn-light rounded-pill py-2 px-4 ms-3"
-             data-bs-toggle="modal"
-             data-bs-target="#employeeLoginModal"
-             id="employeeLoginBtn">
+             id="employeeLoginBtn"
+             rel="noopener">
             Employee | Log In
           </a>
         </div>
@@ -251,47 +241,6 @@
       </div>
     </div>
     <!-- Full Screen Search End -->
-
-    <!-- ✅ Employee Login Embed Modal (Base44) -->
-    <div class="modal fade" id="employeeLoginModal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Employee Log In</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-
-          <div class="modal-body">
-            <div class="alert alert-info mb-3" role="alert">
-              You are signing in via our employee portal.
-            </div>
-
-            <!-- IMPORTANT: include https:// for embedding -->
-            <iframe
-              class="employee-login-embed"
-              src="https://zionspherecompany.base44.app"
-              title="Zion Sphere Employee Login"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              allow="clipboard-read; clipboard-write; fullscreen"
-            ></iframe>
-
-            <!-- Fallback link if embedding is blocked by Base44 (X-Frame-Options/CSP) -->
-            <div class="text-center mt-3">
-              <a class="btn btn-primary rounded-pill px-4"
-                 href="https://zionspherecompany.base44.app"
-                 target="_blank" rel="noopener">
-                Open Employee Portal in a new tab
-              </a>
-            </div>
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-outline-secondary rounded-pill px-4" data-bs-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- About Start -->
     <div class="container-xxl py-5" id="about">
@@ -611,19 +560,6 @@
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="lib/isotope/isotope.pkgd.min.js"></script>
   <script src="lib/lightbox/js/lightbox.min.js"></script>
-
-  <!-- Make sure the modal opens and prevents navigating away -->
-  <script>
-    (function () {
-      const btn = document.getElementById('employeeLoginBtn');
-      if (!btn) return;
-
-      // Prevent leaving the site when clicking "Employee | Log In"
-      btn.addEventListener('click', function (e) {
-        e.preventDefault();
-      });
-    })();
-  </script>
 
   <!-- Template Javascript -->
   <script src="js/main.js"></script>
